@@ -1,0 +1,124 @@
+@use "../../base/variables" as v;
+
+.skills {
+  padding-top: 4.1rem;
+  padding-bottom: 6rem;
+  text-align: center;
+
+  &__header {
+    text-align: center;
+    color: v.$bigTitleColor;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 8.5rem;
+  }
+
+  &__separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 5.7rem;
+      height: 3px;
+      background-color: v.$bigTitleColor;
+    }
+
+    &::before {
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
+    }
+
+    &::after {
+      border-top-right-radius: 2px;
+      border-bottom-right-radius: 2px;
+    }
+
+    & > span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: v.$whiteColor;
+      display: block;
+      border: 2px solid v.$bigTitleColor;
+      position: relative;
+    }
+
+    & > span:not(:last-child) {
+      margin-right: 18px;
+    }
+
+    & > span:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 3px;
+      background-color: v.$bigTitleColor;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    max-width: 30rem;
+    margin-inline: auto;
+  }
+
+  &__detail {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: auto;
+    row-gap: 4.4rem;
+    align-items: end;
+  }
+
+  &__info,
+  &__level {
+    font-weight: bold;
+  }
+
+  &__info {
+    margin-top: 8px;
+    color: v.$textParagraphColor;
+  }
+
+  &__level {
+    margin-top: 2px;
+    font-size: 1.2rem;
+    padding: 2px 2.1rem;
+    width: fit-content;
+    margin-inline: auto;
+    border-radius: 3rem;
+  }
+
+  .basic {
+    background-color: v.$secondaryTwoColor;
+    color: v.$mainTwoNColor;
+  }
+
+  .medium {
+    background-color: v.$secondaryColor;
+    color: v.$mainTwoColor;
+  }
+
+  .advanced {
+    background-color: v.$mainGreenNColor;
+    color: v.$mainGreenColor;
+  }
+
+  &__image {
+    max-width: 6.5rem;
+    margin-inline: auto;
+  }
+}

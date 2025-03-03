@@ -1,0 +1,56 @@
+@use "../../base/variables" as v;
+
+.footer {
+  text-align: center;
+  color: v.$whiteColor;
+
+  &__top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  &__bottom {
+    background-color: v.$mainColor;
+    padding-top: 9px;
+    height: 7.5rem;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
+
+  &__detail {
+    margin-bottom: 1.5rem;
+    position: absolute;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-top: 5px;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  &__social {
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 4rem;
+
+    i {
+      color: v.$whiteColor;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+}
